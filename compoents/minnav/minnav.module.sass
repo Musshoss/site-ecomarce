@@ -1,0 +1,39 @@
+.parent
+    width: 100%
+    position: fixed
+    top: 0
+    z-index: 1001
+    .minnavbar
+        background-color: #111113
+        color: white
+        font-weight: bold
+        overflow: hidden
+        white-space: nowrap
+        direction: ltr
+        height: 40px
+        display: flex
+        align-items: center
+        width: 100%
+        padding: 0
+        .marquee
+            height: 100%
+            display: flex
+            padding: 0
+            align-items: center
+            animation: slide-left 35s linear infinite
+            animation-play-state: running
+            &:hover
+                animation-play-state: paused
+            .marquee_content
+                display: inline-block
+                padding-right: 100px
+                letter-spacing: 1.5px
+                word-spacing: 7px
+                span
+                    color: #EFEFFF
+
+@keyframes slide-left
+    from
+        transform: translateX(0%)
+    to
+        transform: translateX(-50%)

@@ -1,0 +1,101 @@
+.modify_section
+    text-align: center
+    h2
+        color: #070738
+        font-size: 1.5rem
+        margin-bottom: 1rem
+    .search_container
+        margin-bottom: 2rem
+        .search_bar
+            position: relative
+            max-width: 600px
+            margin: 0 auto
+            .search_icon
+                position: absolute
+                left: 1rem
+                top: 50%
+                transform: translateY(-50%)
+                color: #070738
+                font-size: 1.2rem
+            input
+                width: 100%
+                padding: 1rem 1rem 1rem 3rem
+                border: 2px solid #eee
+                border-radius: 8px
+                font-size: 1.1rem
+                transition: all 0.3s ease
+                &:focus
+                    outline: none
+                    border-color: #070738
+                    box-shadow: 0 0 0 3px rgba(7, 7, 56, 0.1)
+        .searchDisplay
+            .loading
+                width: 100%
+                display: flex
+                justify-content: center
+                align-items: center
+                margin: 2rem auto
+            .message
+                font-size: 15px
+                margin-top: 20px
+                color: darkgray
+            .product_item
+                display: flex
+                justify-content: space-between
+                max-width: 600px
+                margin: 0 auto
+                padding: 1rem 2rem
+                .product_details
+                    display: flex
+                    align-items: center
+                    .product_image
+                        width: 40px
+                        height: 40px
+                        margin-right: 1rem
+                    .product_info
+                        display: flex
+                        flex-direction: column
+                        justify-content: center
+                        align-items: flex-start
+                        h3
+                            font-size: 1.2rem
+                            color: #070738
+                        p
+                            font-size: 1rem
+                            color: #555
+                .actions
+                    display: flex
+                    align-items: center
+                    gap: 1rem
+                    .edit_button
+                        display: flex
+                        align-items: center
+                        justify-content: center
+                        gap: 0.2rem
+                        height: 35px
+                        background-color: #070738
+                        color: white
+                        padding: 0.5rem 1rem
+                        border: none
+                        border-radius: 4px
+                        cursor: pointer
+                        transition: background-color 0.3s ease
+                        &:hover
+                            background-color: #0a0a5c
+                    .delete_button
+                        display: flex
+                        align-items: center
+                        justify-content: center
+                        gap: 0.2rem
+                        height: 35px
+                        padding: 0.5rem 1rem
+                        border: none
+                        border-radius: 4px
+                        cursor: pointer
+                        font-size: 1rem
+                        color: #070738
+                        background-color: #e9e6e6
+                        transition: all 0.3s ease
+                        &:hover
+                            background-color: #f22f2f
+                            color: white

@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Philosopher&display=swap')
+
+.navbar
+    display: flex
+    width: 100%
+    z-index: 1000
+    position: fixed
+    .navbar_container
+        display: flex
+        justify-content: space-around
+        align-items: center
+        height: 120px
+        background-color: #fff
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)
+        width: 100%
+        z-index: 100
+        .MenuIcon
+            display: none
+            background: transparent
+            border: none
+            cursor: pointer
+            @media (max-width: 768px)
+                display: block
+        .logo
+            .logo_link
+                text-decoration: none
+                h1
+                    font-size: 3.5rem
+                    font-weight: bold
+                    font-family: 'Philosopher', sans-serif
+                    color: #070738
+                    cursor: pointer
+                    &:hover
+                        color: #1C1CB1
+        .pages
+            display: flex
+            gap: 1.3rem
+            .page_link
+                color: #070738
+                transition: all 0.3s ease
+                position: relative
+                text-decoration: none
+                font-size: 25px
+                font-weight: 700
+                padding: 2px 0
+                &::after
+                    content: ''
+                    position: absolute
+                    width: 0
+                    height: 2.5px
+                    border-radius: 5px
+                    bottom: -2px
+                    left: 0
+                    background-color: #070738
+                    transition: width 0.3s ease
+                &:hover::after
+                    width: 100%
+                &.active::after
+                    width: 100%
+        .menu
+            position: fixed
+            left: 0
+            width: 100vw
+            height: calc( 100vh - 160px )
+            background: rgba(0,0,0,0.6)
+            display: flex
+            justify-content: space-between
+            align-items: stretch
+            z-index: 1000
+            .mobileMenu
+                display: flex
+                flex-direction: column
+                gap: 10px
+                background: white
+                height: 100%
+                padding: 8px
+                transform: translateX(-100%)
+                animation: slideIn 0.3s forwards
+                .page_link
+                    font-size: 22px
+                    font-weight: 600
+                    text-decoration: none
+                    color: #070738
+                    padding: 5px 15px
+                    display: flex
+                    align-items: center
+                    border-radius: 6px
+                    gap: 10px
+                    &:hover
+                        background: #f0f0f0
+                    &.active
+                        background-color: #d1cbcb6c
+        .icon_button
+            display: flex
+            gap: 1rem
+            .button
+                background-color: transparent
+                border: none
+                cursor: pointer
+                font-size: 20px
+                color: rgb(0, 0, 0)
+                position: relative
+                z-index: 10
+                &:hover
+                    color: rgb(69, 69, 69)
+                .numInCart
+                    position: absolute
+                    top: -9px
+                    right: -9px
+                    background-color: #070738
+                    color: #fff
+                    border-radius: 50%
+                    width: 20px
+                    height: 20px
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    font-size: 14px
+                .cartTooltip
+                    position: absolute
+                    width: 350px
+                    height: 300px
+                    top: 85px
+                    padding: 10px
+                    background: white
+                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)
+                    transition: all 0.3s ease-in-out
+                    z-index: -1
+                    .cartTooltipContent
+                        display: flex
+                        justify-content: space-between
+                        align-items: center
+                        width: 100%
+                        h3
+                            font-size: 15px
+                            color: #073812
+                            letter-spacing: 1.3px
+                            font-weight: 400
+                        span
+                            background: transparent
+                            border: none
+                            font-size: 20px
+                            cursor: pointer
+                            color: #070738
+                            &:hover
+                                transform: scale(1.2)
+                                color: #1C1CB1
+                    .cartTooltipProduct
+                        display: flex
+                        align-items: center
+                        justify-content: center
+                        gap: 10px
+                        margin-top: 20px
+                        .cartTooltipImage
+                            width: 80px
+                            height: 100px
+                            object-fit: cover
+                        .cartTooltipDetails
+                            display: flex
+                            flex-direction: column
+                            align-items: flex-start
+                            h4
+                                font-size: 16px
+                                color: #070738
+                                margin: 0
+                            p
+                                font-size: 14px
+                                color: #070738
+                                margin: 5px 0 0 0
+                    .cartTooltipActions
+                        display: flex
+                        justify-content: space-between
+                        align-items: center
+                        flex-direction: column
+                        width: 100%
+                        gap: 5px
+                        margin: 10px 0 0 0
+                        .viewCartButton
+                            background: #070738
+                            text-decoration: none
+                            color: #fff
+                            padding: 8px 20px
+                            width: 150px
+                            display: flex
+                            justify-content: center
+                            border: none
+                            border-radius: 5px
+                            cursor: pointer
+                            font-size: 16px
+                            transition: background 0.3s ease
+                            &:hover
+                                background: #1C1CB1
+                        .viewCheckoutButton
+                            background: #070738
+                            text-decoration: none
+                            color: #fff
+                            padding: 8px 20px
+                            border: none
+                            width: 150px
+                            display: flex
+                            justify-content: center
+                            border-radius: 5px
+                            cursor: pointer
+                            font-size: 16px
+                            transition: background 0.3s ease
+                            &:hover
+                                background: #1C1CB1
+                        .closeButton
+                            background: transparent
+                            border: none
+                            color: #070738
+                            cursor: pointer
+                            font-size: 20px
+                            margin: 10px 0 0 0
+                            &:hover
+                                color: #1C1CB1
+                                text-decoration: underline
+                                text-underline-offset: 4px
+
+@keyframes slideIn
+    to
+        transform: translateX(0)

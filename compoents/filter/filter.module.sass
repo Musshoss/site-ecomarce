@@ -1,0 +1,62 @@
+.filter
+    min-width: 180px
+    h1
+        color: #070738
+    .filterContainer
+        width: 100%
+        .disponibility
+            .partApparente
+                display: flex
+                justify-content: space-between
+                align-items: center
+                cursor: pointer
+                width: 100%
+                h1
+                    font-size: 1rem
+                    color: #070738
+                    font-weight: 600
+            .hiddenPart
+                display: flex
+                flex-direction: column
+                justify-content: center
+                gap: 8px
+    .filterContainer
+        .price
+            .partApparente
+                display: flex
+                justify-content: space-between
+                align-items: center
+                cursor: pointer
+                h1
+                    font-size: 1rem
+                    color: #070738
+                    font-weight: 600
+            .hiddenPartPrice
+                display: flex
+                flex-direction: column
+                justify-content: center
+                gap: 8px
+                .priceRange
+                    display: flex
+                    flex-wrap: wrap
+                    justify-content: center
+                    gap: 8px
+                    input
+                        -webkit-appearance: none
+                        height: 20px
+                        padding: 2.5px 5px
+                        border-radius: 10px
+                        outline: none
+                        border: 1px solid #070738
+                    .filtering
+                        padding: 4px 10px
+                        border-radius: 10px
+                        border: 1px solid #070738
+                        background-color: #070738
+                        color: #FFF
+                        cursor: pointer
+                        font-weight: 500
+                        transition: all 0.3s ease-in-out
+                        &:hover
+                            background-color: #FFF
+                            color: #070738
